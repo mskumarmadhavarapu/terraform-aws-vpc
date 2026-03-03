@@ -1,7 +1,9 @@
-resource "aws_instance" "this" {
-    ami                 = var.ami_id
-    instance_type       = var.instance_type
-    vpc_security_group_ids = var.sg_ids
+resource "aws_vpc" "main" {
+  cidr_block       = var.vpc_cidr
+  instance_tendancy = "default"
+  enable_dns_hostnames = true
 
-    tags = local.vpc_final_tags
-}    
+  tags = {
+    Name = "manual-vpc"
+  }
+}
