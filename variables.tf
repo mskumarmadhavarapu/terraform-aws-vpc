@@ -30,3 +30,18 @@ variable "public_subnet_tags" {
     type = map
     default = {}   
 }
+
+variable "private_route_table_tags" {
+    default = {}
+    type    = map
+}
+
+variable "public_route_table_tags" {
+    default = {}
+    type    = map
+}
+
+variable "database_route_table_tags" {
+    default = {}
+    type    = map
+}
