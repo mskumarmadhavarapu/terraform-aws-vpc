@@ -40,7 +40,7 @@ resource "aws_route_table" "private" {
          # roboshop-dev-private
          {
             Name = "${var.project}-${var.environment}-private"
-         }
+         },
          var.private_route_table_tags
   )
 }
@@ -54,7 +54,7 @@ resource "aws_route_table" "public" {
          # roboshop-dev-public
          {
             Name = "${var.project}-${var.environment}-public"
-         }
+         },
          var.public_route_table_tags
   )
 }
@@ -68,7 +68,7 @@ resource "aws_route_table" "database" {
          # roboshop-dev-database
          {
             Name = "${var.project}-${var.environment}-database"
-         }
+         },
          var.daabase_route_table_tags
   )
 }
