@@ -69,6 +69,6 @@ resource "aws_route_table" "database" {
          {
             Name = "${var.project}-${var.environment}-database"
          },
-         var.daabase_route_table_tags
+         var.database_route_table_tags
   )
 }
